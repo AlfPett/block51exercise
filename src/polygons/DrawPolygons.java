@@ -15,11 +15,10 @@ public class DrawPolygons extends JComponent{
     private int ticker = 0;
 
     public DrawPolygons(){
-        polygons = new ArrayList<>(10);
-
-        polygons.add(new Square(50,50));
-        polygons.add(new Triangle(100,100));
-        polygons.add(new Rectangle(50,150));
+        Polygonfactory(Square, 50, 50);
+        Polygonfactory(Rectangle, 100, 100);
+        Polygonfactory(Triangle, 150, 150);
+        polygons = getListOfPolygons();
 
     }//constructor
 
